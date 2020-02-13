@@ -1,2 +1,5 @@
-# sc-odin-docs
-SC-ODIN's documentation
+# SC-Odin Documentation
+
+## FPrime
+
+* [Setting up Fprime](setting-up-fprime.md)
