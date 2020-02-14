@@ -45,11 +45,11 @@ FPrime has a script that will install other ubuntu packages for you
 Now see if you have the rest of the dependencies
 
 * `which gcc`
-    * if that command displays something like `/usr/bin/gcc`, then (optional) do `apt upgrade gcc` else do `apt install gcc`
+  * if that command displays something like `/usr/bin/gcc`, then (optional) do `apt upgrade gcc` else do `apt install gcc`
 * `which g++`
-    * if that command displays something like `/usr/bin/g++`, then (optional) do `apt upgrade gcc` else do `apt install g++`
+  * if that command displays something like `/usr/bin/g++`, then (optional) do `apt upgrade gcc` else do `apt install g++`
 * `which cmake`
-    * if that command displays something like `usr/bin/cmake`, then (optional) do `apt upgrade cmake` else do `apt install cmake`
+  * if that command displays something like `usr/bin/cmake`, then (optional) do `apt upgrade cmake` else do `apt install cmake`
 * `pip3 instally numpy`
 * `pip3 install pytest`
 * `pip3 install -r fprime/mk/python/pip_required_build3.py`
@@ -99,8 +99,8 @@ There is two ways you can build for your linux system
 F' doc says that you almost always wants to run the install command on deployments. See the [install command section](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility). 
 
 * You might want to do [install](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility) instead, but the steps are outlined here for completeness
-    - `cd <path/to/fprime/checkout>/Ref`
-    - `fprime-util build`
+  * `cd <path/to/fprime/checkout>/Ref`
+  * `fprime-util build`
 
 #### Generating Components and Deployments
 
@@ -112,8 +112,6 @@ Example of Build SignalGen Component
 * `fprime-util build`
 
 If you want to build a deployment, then use `cd <path/to/fprime/checkout>/deployment` then `fprime-util build` (just like in [Build Ref deployment](https://github.com/laurentlaurent/Setting-Up-FPrime#build-ref-deployment)).
-
-
 
 ### Using CMake
 
@@ -136,7 +134,7 @@ Read the following [README](https://github.com/nasa/fprime/tree/master/cmake) to
 
 Now, you can either choose to build with the F' Utility or CMake
 
-### Using F' Utility
+### Using F' Utility for BBB
 
 #### Generate a BBB Cross-Compile of the Ref Application
 
@@ -145,15 +143,15 @@ Now, you can either choose to build with the F' Utility or CMake
 
 #### Example of Build SignalGen Component and Ref deployment 
 
-F' doc says that you almost always wants to run the install command on deployments. See the install command section. 
+F' doc says that you almost always wants to run the install command on deployments. See the install command section.
 
 * Example of building component
-    * `cd <path/to/fprime/checkout>/Ref/SignalGen`
-    * `fprime-util build bbb`
+  * `cd <path/to/fprime/checkout>/Ref/SignalGen`
+  * `fprime-util build bbb`
 * Example of building a deployment. 
-    * You might want to do [install](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility) instead, but the steps are outlined here for completeness
-    * `cd <path/to/fprime/checkout>/Ref`
-    * `fprime-util build bbb`
+  * You might want to do [install](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility) instead, but the steps are outlined here for completeness
+  * `cd <path/to/fprime/checkout>/Ref`
+  * `fprime-util build bbb`
 
 ### Using CMake (INCOMPLETE)
 
@@ -184,20 +182,23 @@ Need to setup communication between the BBB and our host computer so that we can
 (The rest is copy pasted from the F' [tutorial](https://github.com/nasa/fprime/blob/master/docs/Tutorials/GettingStarted/Tutorial.md#installing-the-f-executable-and-dictionaries), it is here for completeness.)
 
 <!-- Start of copy/paste from F' Tutorial -->
-
+<!-- markdownlint-disable MD036 -->
 Once the deployment is built, it would nice to be able to install the binary and dictionaries. This will enable the users to quickly find and run the deployment. This installation can be run using the following command. Everything will be installed to the directory defining the deployment. i.e. fprime/Ref/bin. Install will also invoke "build" so users should use this in-place of build for deployments.
 
 **Installing the Ref Deployment and Running the Binary Assuming Linux**
-```
+
+```bash
 cd fprime/Ref
 fprime-util install
 ./bin/Linux/Ref # Run the deployment
 CTRL-C # Exit the application
 ```
+
 Running the application as part of the development ground data system is shown below.
 
 The user can also install a cross-compile.
-```
+
+```bash
 cd fprime/Ref
 fprime-util install raspberrypi
 ```
@@ -209,7 +210,8 @@ files. This can be done using the "impl" command of the F´ utility. These comma
 They can be run passing in a toolchain, but this is typically not done because they are toolchain independent.
 
 **Generating Implementation Stubs of SignalGen**
-```
+
+```bash
 cd fprime/Ref/SignalGen
 fprime-util impl
 ```
@@ -226,14 +228,15 @@ assume a default build has been generated. They can be run passing in a toolchai
 they are toolchain independent.
 
 **Generating Unit Test Stubs of SignalGen**
-```
+
+```bash
 cd fprime/Ref/SignalGen
 fprime-util impl-ut
 ```
 
-This creates the following files, that are typically moved to a sub folder called `test/ut`.  The files created are 
-placed in the current directory and named:
-```
+This creates the following files, that are typically moved to a sub folder called `test/ut`.  The files created are placed in the current directory and named:
+
+```bash
 Tester.cpp
 Tester.hpp
 GTestBase.cpp
@@ -249,13 +252,15 @@ Unit tests can be build using the the `build-ut` command of the `fprime-util`. T
 in preparation to run them.  The user can also just run "check" to build and run the unit tests.
 
 **Building Unit Test of SignalGen**
-```
+
+```bash
 cd fprime/Ref/SignalGen
 fprime-util build-ut
 ```
 
 Once built, the unit test can be run using the following command.
-```
+
+```bash
 cd fprime/Ref/SignalGen
 fprime-util check
 ```
@@ -266,7 +271,8 @@ The user can also build the unit test, but must copy it to the hardware and run 
 compile by running the following commands.
 
 **Cross-Compile Unit Test of SignalGen**
-```
+
+```bash
 cd fprime/Ref/SignalGen
 fprime-util build-ut raspberrypi
 ```
@@ -274,12 +280,9 @@ fprime-util build-ut raspberrypi
 ## Conclusion
 
 The user should now be familiar with F´ terminology and with the `fprime-util` tool used to build and develop F´
-applications. The next step is to follow the full `MathComponent` tutorial to create new *Ports*, *Components*, and 
-*Topologies*. This will walk the user through the entire development process, using the tool commands we learned here.
+applications. The next step is to follow the full `MathComponent` tutorial to create new *Ports*, *Components*, and *Topologies*. This will walk the user through the entire development process, using the tool commands we learned here.
 
 **Next:** [Math Component Tutorial](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)
 **Also See:** [GPS Component Tutorial](https://github.com/nasa/fprime/blob/master/docs/Tutorials/GpsTutorial/Tutorial.md) for a cross-compiling tutorial.
 
 <!-- End of Copy/Paste from F' tutorial -->
-
-
