@@ -8,13 +8,11 @@ Any contributions pushed to the `master` branch of the [repository](https://gith
 
 See the Sidebar to nagivate this website.
 
-## Contributors
+## Contributing
 
 [Guide](guide-contribution.md) on how to contribute
 
 [Issues](https://github.com/spaceconcordia/sc-odin-docs/issues) you can contribute on.
-
-[@laurentlaurent](https://github.com/laurentlaurent)
 
 ## Request a modification
 
