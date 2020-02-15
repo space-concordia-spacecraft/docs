@@ -16,4 +16,4 @@ See the Sidebar to nagivate this website.
 
 ## Request a modification
 
-Use the [Issue](https://github.com/spaceconcordia/sc-odin-docs/issues) page to request a modifcation
+Create a new [Issue](https://github.com/spaceconcordia/sc-odin-docs/issues/new) page to request a modifcation
