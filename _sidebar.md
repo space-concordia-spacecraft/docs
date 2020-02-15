@@ -3,4 +3,4 @@
 
 * [Git Guide](/raw-redirect/laurent-git-guide)
 
-* [Fprime](main-fprime.md)
+* [Fprime](/fprime/main-fprime)

@@ -1,4 +1,4 @@
-# SC-Odin Documentation
+# SC-Odin Documentation {docsify-ignore-all}
 
 This website has been created with the help of [Docsify](https://docsify.js.org/#/) and is being hosted on [Zeit](https://zeit.co/).
 
