@@ -12,11 +12,22 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      loadSidebar: true,
       name: 'SC-ODIN Documentation',
-      repo: 'https://github.com/spaceconcordia/sc-odin-docs'
+      repo: 'https://github.com/spaceconcordia/sc-odin-docs',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      remoteMarkdown: {
+        tag: 'Git Guide',
+        // usage guide available  at /raw-redirect/_README.md
+      },
+      alias: {
+        // usage: '/link': '/internal-page-to-redirect-to'
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
 </body>
 </html>
