@@ -10,6 +10,7 @@
 </head>
 <body>
   <div id="app"></div>
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
   <script>
     window.$docsify = {
       name: 'SC-ODIN Documentation',
@@ -19,12 +20,15 @@
       auto2top: true,
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
       remoteMarkdown: {
-        tag: 'Git Guide',
+        tag: 'Git Guide'
         // usage guide available  at /raw-redirect/_README.md
       },
-      alias: {
-        // usage: '/link': '/internal-page-to-redirect-to'
-      }
+      plugins: [
+      EditOnGithubPlugin.create(
+        'https://github.com/spaceconcordia/sc-odin-docs/blob/master/',
+        null, 
+        'Edit on Github')
+      ],
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
