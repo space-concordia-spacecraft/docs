@@ -1,7 +1,7 @@
 <!-- The {docsify-ignore-all} is to prevent docsify for creating a table of content inside the sidebar for this page -->
 # SC-Odin Documentation {docsify-ignore-all}
 
-This website has been created with the help of [Docsify](https://docsify.js.org/#/) and is being hosted on [Zeit](https://zeit.co/).
+This website has been created with the help of [Docsify](https://docsify.js.org/#/).
 
 It aims to serve documentation for the development of the SC-ODIN satellite by the [Space Concordia Spacecraft team](https://spaceconcordia.github.io/spacecraft.html).
 
