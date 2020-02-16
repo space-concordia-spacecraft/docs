@@ -6,7 +6,7 @@ See this [Git Guide](/raw-redirect/laurent-git-guide.md) to know how to use git.
 
 Clone the repo
 
-`git clone https://github.com/spaceconcordia/sc-odin-docs.git`
+`git clone https://github.com/sc-odin/docs.git`
 
 Install Node.js (easiest way is through the [package](https://nodejs.org/en/)), then install docsify
 
