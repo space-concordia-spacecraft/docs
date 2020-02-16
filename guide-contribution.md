@@ -41,6 +41,56 @@ git push -u origin <nameOfBranch>
 
 Make a [pull request](https://github.com/spaceconcordia/sc-odin-docs/pulls) and assign a collaborator.
 
+## Using PlantUML
+
+Learn PlantUML syntax [here](https://plantuml.com)
+
+<!-- markdownlint-disable -->
+<pre><code>```plantuml
+@startuml
+
+abstract class Class01
+interface Class02
+
+Class01 <|-- Extension
+Class02 *-- Composition
+Class03 o-- Aggregation
+Class04 .. DottedLine
+Class05 -- JustALine
+
+class Class01 {
+  .. Getter ..
+  + getName()
+  __ private data __
+  - formatName()
+}
+
+@enduml
+```</code></pre>
+
+Becomes:
+
+```plantuml
+@startuml
+abstract class Class01
+interface Class02
+
+Class01 <|-- Extension
+Class02 *-- Composition
+Class03 o-- Aggregation
+Class04 .. DottedLine
+Class05 -- JustALine
+
+class Class01 {
+  .. Getter ..
+  + getName()
+  __ private data __
+  - formatName()
+}
+@enduml
+```
+<!-- markdownlint-enable -->
+
 ## TBD
 
 * Markdown guide
