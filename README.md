@@ -7,7 +7,11 @@ It aims to serve documentation for the development of the SC-ODIN satellite by t
 
 Any contributions pushed to the `master` branch of the [repository](https://github.com/spaceconcordia/sc-odin-docs) will update this website after a couple of minutes.
 
-See the Sidebar to nagivate this website.
+## Site Navigation
+
+See the sidebar to nagivate the website.
+
+_NOTE_: The `search bar` only works on files that currently are shown in the Sidebar. If you want to search a specific subject, navigate to it before using the `search bar`.
 
 ## Contributing
 

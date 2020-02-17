@@ -16,22 +16,47 @@
       name: 'SC-ODIN Documentation',
       repo: 'https://github.com/sc-odin/docs',
       loadSidebar: true,
+      maxLevel : 3,
       subMaxLevel: 3,
       auto2top: true,
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      // For docsify-remote-markdown
       remoteMarkdown: {
         tag: 'Git Guide'
         // usage guide available  at /raw-redirect/_README.md
       },
+      // For docsify-edit-on-github (above)
       plugins: [
       EditOnGithubPlugin.create(
         'https://github.com/spaceconcordia/sc-odin-docs/blob/master/',
         null, 
         'Edit on Github')
       ],
+      // For search.min.js
+      search: {
+        maxAge: 1,
+        paths: 'auto', // we could modify this to allow full site-map, but will have to add all new links manually
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        depth: 6,
+        hideOtherSidebarContent: false,
+        namespace: 'sc-odin-docs'
+      },
+      // For Pagination.min.js
+      pagination: {
+          crossChapter: true,
+          crossChapterText: true,
+      },
+      // For PlantUML
+      plantul: {
+        skin: 'default',
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
 </body>
 </html>
