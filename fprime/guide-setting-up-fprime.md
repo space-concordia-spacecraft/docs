@@ -21,6 +21,7 @@ Open up terminal and run:
 * `apt update` (it should ask you for your sudo password)
 * `apt install git`
 * `git clone https://github.com/nasa/fprime`
+* The path of your copy of your repo will henceforth be referred to as `<path/to/fprime/checkout>`
 
 ### Installing python3
 
@@ -31,9 +32,9 @@ Open up terminal and run:
 * `sudo apt install python3-venv`
 * Then run `python3 -m venv ./fprime-venv` (preferably in the same parent folder that contains the F' repo)
 * You can now execute `. ./fprime-venv/bin/activate` to go into the virtual environment
-    * You might want to copy the `venv.sh` [file](https://github.com/laurentlaurent/Setting-Up-FPrime/blob/master/venv.sh) available in this repo in the same folder as your `fprime-venv` to make it easier to launch the virtual environment
-    * If you do so, make sure to `chmod +x venv.sh`
-    * Then you'll be able to switch to the fprime-venv using `. ./venv.sh`
+  * You might want to copy the `venv.sh` [file](https://github.com/laurentlaurent/Setting-Up-FPrime/blob/master/venv.sh) available in this repo in the same folder as your `fprime-venv` to make it easier to launch the virtual environment
+  * If you do so, make sure to `chmod +x venv.sh`
+  * Then you'll be able to switch to the fprime-venv using `. ./venv.sh`
 * When you're switched, your terminal should show `(fprime-venv)`
 
 ### Installing other dependencies
@@ -61,6 +62,7 @@ Now see if you have the rest of the dependencies
 
 ### Install F' Python Requirements
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * `cd <path/to/fprime/checkout>`
 * `pip3 install ./Fw/Python`
 * `pip3 install ./Gds`
@@ -75,6 +77,7 @@ Now you should be done with installing dependencies. Check your installation wit
 * `fprime-util install --jobs 32` should return no error (it looks really cool)
 * Go back to the parent folder of the `fprime repo`
 * Run `fprime-gds -g html -d <path/to/fprime/checkout>/Ref` (this won't work if you have not done all 3 of the generate, build and install before)
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 
 ## Building for Linux
 
@@ -86,19 +89,22 @@ There is two ways you can build for your linux system
 
 #### Generate the Ref application
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * `cd <path/to/fprime/checkout>/Ref`
 * `fprime-util generate` (it will fail if you've executed before in [Checking your F' Installation](https://github.com/laurentlaurent/Setting-Up-FPrime#checking-your-f-installation))
 
 #### Generate the F' Framework
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * `cd <path/to/fprime/checkout>` (no Ref)
 * `fprime-util generate`
 
-#### Build Ref deployment 
+#### Build Ref deployment
 
-F' doc says that you almost always wants to run the install command on deployments. See the [install command section](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility). 
+F' doc says that you almost always wants to run the install command on deployments. See the [install command section](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility).
 
-* You might want to do [install](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility) instead, but the steps are outlined here for completeness
+* You should do [install](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility) instead, but the steps are outlined here for completeness
+  * _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
   * `cd <path/to/fprime/checkout>/Ref`
   * `fprime-util build`
 
@@ -108,6 +114,7 @@ Using the F' Utility tools, you can build a component or deployment using `cd fp
 
 Example of Build SignalGen Component
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * `cd <path/to/fprime/checkout>/Ref/SignalGen`
 * `fprime-util build`
 
@@ -115,6 +122,7 @@ If you want to build a deployment, then use `cd <path/to/fprime/checkout>/deploy
 
 ### Using CMake
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * `cd <path/to/fprime/checkout>` (no Ref)
 * `mkdir build-linux`
 * `cd build-linux`
@@ -129,6 +137,7 @@ Read the following [README](https://github.com/nasa/fprime/tree/master/cmake) to
 
 ### Create 2 files
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * Navigate to `<path/to/fprime/checkout>/cmake/platform` and execute `touch bbb.cmake`
 * Copy the `bbb.cmake` [file](https://github.com/laurentlaurent/Setting-Up-FPrime/blob/master/bbb.cmake) from this repo into the directory `<path/to/fprime/checkout>/cmake/toolchain`
 
@@ -138,23 +147,26 @@ Now, you can either choose to build with the F' Utility or CMake
 
 #### Generate a BBB Cross-Compile of the Ref Application
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * `cd <path/to/fprime/checkout>/Ref`
 * `fprime-util generate bbb`
 
-#### Example of Build SignalGen Component and Ref deployment 
+#### Example of Build SignalGen Component and Ref deployment
 
 F' doc says that you almost always wants to run the install command on deployments. See the install command section.
 
 * Example of building component
+  * _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
   * `cd <path/to/fprime/checkout>/Ref/SignalGen`
   * `fprime-util build bbb`
-* Example of building a deployment. 
+* Example of building a deployment.
   * You might want to do [install](https://github.com/laurentlaurent/Setting-Up-FPrime#install-command-f-utility) instead, but the steps are outlined here for completeness
   * `cd <path/to/fprime/checkout>/Ref`
   * `fprime-util build bbb`
 
 ### Using CMake (INCOMPLETE)
 
+* _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
 * `cd <path/to/fprime/checkout>` (no Ref)
 * `mkdir build-cross`
 * `cd build-cross`
@@ -188,7 +200,8 @@ Once the deployment is built, it would nice to be able to install the binary and
 **Installing the Ref Deployment and Running the Binary Assuming Linux**
 
 ```bash
-cd fprime/Ref
+# Note: <path/to/fprime/checkout> is the path to your clone of the fprime repo
+cd <path/to/fprime/checkout>/Ref
 fprime-util install
 ./bin/Linux/Ref # Run the deployment
 CTRL-C # Exit the application
@@ -199,7 +212,8 @@ Running the application as part of the development ground data system is shown b
 The user can also install a cross-compile.
 
 ```bash
-cd fprime/Ref
+# Note: <path/to/fprime/checkout> is the path to your clone of the fprime repo
+cd <path/to/fprime/checkout>/Ref
 fprime-util install raspberrypi
 ```
 
@@ -212,13 +226,13 @@ They can be run passing in a toolchain, but this is typically not done because t
 **Generating Implementation Stubs of SignalGen**
 
 ```bash
-cd fprime/Ref/SignalGen
+# Note: <path/to/fprime/checkout> is the path to your clone of the fprime repo
+cd <path/to/fprime/checkout>/Ref/SignalGen
 fprime-util impl
 ```
 
 This creates two files for the component. These are `<Component>Impl.cpp-template` and `<Component>Impl.hpp-template`.
-The user can then rename these files to remove `-template`. The file is then ready for C++ development. By generating 
-`-template` files, we won't accidentally overwrite any existing implementation.
+The user can then rename these files to remove `-template`. The file is then ready for C++ development. By generating `-template` files, we won't accidentally overwrite any existing implementation.
 
 ## Creating Unit Test Implementations
 
@@ -230,7 +244,8 @@ they are toolchain independent.
 **Generating Unit Test Stubs of SignalGen**
 
 ```bash
-cd fprime/Ref/SignalGen
+# Note: <path/to/fprime/checkout> is the path to your clone of the fprime repo
+cd <path/to/fprime/checkout>/Ref/SignalGen
 fprime-util impl-ut
 ```
 
@@ -254,14 +269,16 @@ in preparation to run them.  The user can also just run "check" to build and run
 **Building Unit Test of SignalGen**
 
 ```bash
-cd fprime/Ref/SignalGen
+# Note: <path/to/fprime/checkout> is the path to your clone of the fprime repo
+cd <path/to/fprime/checkout>/Ref/SignalGen
 fprime-util build-ut
 ```
 
 Once built, the unit test can be run using the following command.
 
 ```bash
-cd fprime/Ref/SignalGen
+# Note: <path/to/fprime/checkout> is the path to your clone of the fprime repo
+cd <path/to/fprime/checkout>/Ref/SignalGen
 fprime-util check
 ```
 
@@ -273,7 +290,8 @@ compile by running the following commands.
 **Cross-Compile Unit Test of SignalGen**
 
 ```bash
-cd fprime/Ref/SignalGen
+# Note: <path/to/fprime/checkout> is the path to your clone of the fprime repo
+cd <path/to/fprime/checkout>/Ref/SignalGen
 fprime-util build-ut raspberrypi
 ```
 
