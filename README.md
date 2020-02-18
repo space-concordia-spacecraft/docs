@@ -11,7 +11,7 @@ Any contributions pushed to the `master` branch of the [repository](https://gith
 
 See the sidebar to nagivate the website.
 
-_NOTE_: The `search bar` only works on files that currently are shown in the Sidebar. If you want to search a specific subject, navigate to it before using the `search bar`.
+_NOTE:_ The `search bar` only works on files that currently are shown in the Sidebar. If you want to search a specific subject, navigate to it before using the `search bar`.
 
 ## Contributing
 
