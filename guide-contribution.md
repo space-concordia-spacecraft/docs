@@ -94,4 +94,5 @@ class Class01 {
 ## TBD
 
 * Markdown guide
-* Website file structure
+
+* Following the Website file structure

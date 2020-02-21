@@ -21,4 +21,4 @@ _NOTE:_ The `search bar` only works on files that currently are shown in the Sid
 
 ## Request a modification
 
-Create a new [Issue](https://github.com/spaceconcordia/sc-odin-docs/issues/new) page to request a modifcation
+Create a new [Issue](https://github.com/spaceconcordia/sc-odin-docs/issues/new) page to request an addition or some modifcations
