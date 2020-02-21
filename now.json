@@ -1,4 +1,7 @@
-{
+{ 
+  "alias" : [
+    "docs.sc-odin.now.sh"
+  ],
   "github": {
     "silent": true
   }
