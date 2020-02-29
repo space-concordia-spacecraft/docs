@@ -4,3 +4,5 @@
 * [Git Guide](/raw-redirect/laurent-git-guide)
 
 * [Fprime](/fprime/main-fprime)
+
+* [CDH modules chart](cdh-modules-chart.md)
