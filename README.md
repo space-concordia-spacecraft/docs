@@ -15,7 +15,7 @@ _NOTE:_ The `search bar` only works on files that currently are shown in the Sid
 
 ## Contributing
 
-[Guide](guide-contribution.md) on how to contribute
+[Guide](guide-contribution.md) on how to contribute.
 
 [Issues](https://github.com/spaceconcordia/sc-odin-docs/issues) you can contribute on.
 
