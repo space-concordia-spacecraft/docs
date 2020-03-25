@@ -1,6 +1,6 @@
 # F ' Install for MacOS
 
-This guide aims to enable users to install F ' directly on their Mac.
+This guide aims to enable users to install F ' directly on their Mac without the use of VirtualBox
 
 ## Before getting started
 
