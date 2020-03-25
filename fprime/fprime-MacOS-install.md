@@ -7,7 +7,7 @@ This guide aims to enable users to install F ' directly on their Mac without the
 In order to install the system dependencies needed to run F ', we will be making use of a brilliant tool called Homebrew. To install Homebrew, open up terminal and follow [these steps](https://docs.laurentlao.com/#/mac/setting-mac-terminal?id=installing-brew).
 
 
-Next we need to install [Git](https://docs.laurentlao.com/#/mac/setting-mac-terminal?id=installing-git).
+Next, you need to install [Git](https://docs.laurentlao.com/#/mac/setting-mac-terminal?id=installing-git).
 
 ## Installing system dependencies
 
@@ -23,10 +23,10 @@ By default, the file should be copied under /Users/yourcurrentuser/fprime. For t
 ### Installing Python 3 and pip
 
 * `brew install python3`
-*`brew upgrade python3`
+* `brew upgrade python3`
 * Verify Python 3 installation `python3 -V`
-*`python3 -m pip install pip --upgrade`
-*`python3 -m pip install pipenv`
+* `python3 -m pip install pip --upgrade`
+* `python3 -m pip install pipenv`
 * Verify pip installation `pipenv`
 
 
