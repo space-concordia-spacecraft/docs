@@ -6,7 +6,7 @@ Improves on [Amrit Thind](https://github.com/ehthind)'s instructions (available 
 
 Mainly:
 
-* [INSTALL.md](https://github.com/nasa/fprime/blob/master/docs/INSTALL.md)
+* [INSTALL.md](https://github.com/nasa/fprime/blob/master/docs/INSTALL.md) If you are a Mac User, refer to the following [Install](https://github.com/Bilal-yat/docs/blob/master/fprime/fprime-MacOS-install.md)
 * [Getting Started with F'](https://github.com/nasa/fprime/blob/master/docs/Tutorials/GettingStarted/Tutorial.md)
 * [F' User Guide](https://github.com/nasa/fprime/blob/master/docs/UsersGuide/FprimeUserGuide.pdf)
 
