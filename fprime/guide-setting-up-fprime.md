@@ -56,9 +56,10 @@ Now see if you have the rest of the dependencies
 * `which cmake`
   * if that command displays something like `usr/bin/cmake`, then (optional) do `apt upgrade cmake`
     * else do `apt install cmake`
-* `pip3 instally numpy`
-* `pip3 install pytest`
-* `pip3 install -r fprime/mk/python/pip_required_build3.py`
+* Also install:
+  * `pip3 install numpy`
+  * `pip3 install pytest`
+  * `pip3 install -r fprime/mk/python/pip_required_build3.py`
 
 ### Installing the Arm toolchain compilers
 
