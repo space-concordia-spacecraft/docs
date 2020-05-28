@@ -59,7 +59,7 @@ Now see if you have the rest of the dependencies
 * Also install:
   * `pip3 install numpy`
   * `pip3 install pytest`
-  * `pip3 install -r fprime/mk/python/pip_required_build3.py`
+  * `pip3 install -r fprime/mk/python/pip_required_build3.py` (run this on the parent folder of the fprime repo)
 
 ### Installing the Arm toolchain compilers
 
@@ -69,7 +69,7 @@ Now see if you have the rest of the dependencies
 ### Install F' Python Requirements
 
 * _Note:_ `<path/to/fprime/checkout>` is the path to your clone of the fprime repo
-* `cd <path/to/fprime/checkout>`
+* Go to the fprime repo folder: `cd <path/to/fprime/checkout>`
 * `pip3 install ./Fw/Python`
 * `pip3 install ./Gds`
 
@@ -77,7 +77,7 @@ Now see if you have the rest of the dependencies
 
 Now you should be done with installing dependencies. Check your installation with these commands.
 
-* `cd Ref`
+* `cd Ref` (you should be in `./fprime/Ref` after)
 * `fprime-util generate` should return no error
 * `fprime-util build --jobs 32` should return no error (it looks really cool)
 * `fprime-util install --jobs 32` should return no error (it looks really cool)
@@ -197,7 +197,7 @@ Need to setup communication between the BBB and our host computer so that we can
 
 ## Install Command (F' utility)
 
-(The rest is copy pasted from the F' [tutorial](https://github.com/nasa/fprime/blob/master/docs/Tutorials/GettingStarted/Tutorial.md#installing-the-f-executable-and-dictionaries), it is here for completeness.)
+*(The rest is copy pasted from the F' [tutorial](https://github.com/nasa/fprime/blob/master/docs/Tutorials/GettingStarted/Tutorial.md#installing-the-f-executable-and-dictionaries), it is here for completeness.)*
 
 <!-- Start of copy/paste from F' Tutorial -->
 <!-- markdownlint-disable MD036 -->
