@@ -6,11 +6,13 @@ Improves on [Amrit Thind](https://github.com/ehthind)'s instructions (available 
 
 Mainly:
 
-* [INSTALL.md](https://github.com/nasa/fprime/blob/master/docs/INSTALL.md) If you are a Mac User, refer to the following [Install](https://github.com/Bilal-yat/docs/blob/master/fprime/fprime-MacOS-install.md)
+* [INSTALL.md](https://github.com/nasa/fprime/blob/master/docs/INSTALL.md)
 * [Getting Started with F'](https://github.com/nasa/fprime/blob/master/docs/Tutorials/GettingStarted/Tutorial.md)
 * [F' User Guide](https://github.com/nasa/fprime/blob/master/docs/UsersGuide/FprimeUserGuide.pdf)
 
 This guide assumes that you are running Ubuntu/Linux Mint either as a VM or as your OS.
+
+* If you are a Mac User, refer to the following: [Installing FPrime for MacOS](fprime-MacOS-Install.md)
 
 ## Installing System Dependencies
 
