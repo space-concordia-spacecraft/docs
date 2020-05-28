@@ -39,6 +39,8 @@ Open up terminal and run:
 
 ### Installing other dependencies
 
+From here on out, you should be on the fprime-venv unless otherwise specified.
+
 FPrime has a script that will install other ubuntu packages for you
 
 * `sudo ./fprime/mk/os-pkg/ubuntu-packages.sh`
@@ -46,11 +48,14 @@ FPrime has a script that will install other ubuntu packages for you
 Now see if you have the rest of the dependencies
 
 * `which gcc`
-  * if that command displays something like `/usr/bin/gcc`, then (optional) do `apt upgrade gcc` else do `apt install gcc`
+  * if that command displays something like `/usr/bin/gcc`, then (optional) do `apt upgrade gcc`
+    * else do `apt install gcc`
 * `which g++`
-  * if that command displays something like `/usr/bin/g++`, then (optional) do `apt upgrade gcc` else do `apt install g++`
+  * if that command displays something like `/usr/bin/g++`, then (optional) do `apt upgrade gcc`
+    * else do `apt install g++`
 * `which cmake`
-  * if that command displays something like `usr/bin/cmake`, then (optional) do `apt upgrade cmake` else do `apt install cmake`
+  * if that command displays something like `usr/bin/cmake`, then (optional) do `apt upgrade cmake`
+    * else do `apt install cmake`
 * `pip3 instally numpy`
 * `pip3 install pytest`
 * `pip3 install -r fprime/mk/python/pip_required_build3.py`
