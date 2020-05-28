@@ -55,3 +55,5 @@ By default, the file should be copied under /Users/yourcurrentuser/fprime. For t
 * Return to the parent folder of the Fprime repo using `cd` and run `fprime-gds -g html -d /your/path/to/fprime/Ref`
 
 **Note:** Make sure to add `/Ref/` after your pathname.
+
+# TODO: Incomplete (Missing Cross-compile toolchain)
