@@ -12,6 +12,8 @@ Mainly:
 
 This guide assumes that you are running Ubuntu/Linux Mint either as a VM or as your OS.
 
+*Make sure that your Ubuntu/Linux Mint version is the Bionic (18.04) version*
+
 * If you are a Mac User, refer to the following: [Installing FPrime for MacOS](fprime-MacOS-Install.md)
 
 ## Installing System Dependencies
