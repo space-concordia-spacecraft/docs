@@ -24,7 +24,8 @@ Open up terminal and run:
 
 * `apt update` (it should ask you for your sudo password. If it doesn't, append `sudo` at the start of the command to resolve the permission errors. (e.g. `sudo apt update`))
 * `apt install git`
-* `git clone https://github.com/nasa/fprime`
+* `git clone https://github.com/sc-odin/fprime.git` (that's our fork of the fprime)
+  * for NASA's : `git clone https://github.com/nasa/fprime`
 * The path of your copy of your repo will henceforth be referred to as `<path/to/fprime/checkout>`
 
 ### Installing python3
