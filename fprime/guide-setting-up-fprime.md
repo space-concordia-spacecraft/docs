@@ -22,7 +22,7 @@ Open up terminal and run:
 
 ### Cloning the repo
 
-* `apt update` (it should ask you for your sudo password)
+* `apt update` (it should ask you for your sudo password. If it doesn't, append `sudo` at the start of the command to resolve the permission errors. (e.g. `sudo apt update`))
 * `apt install git`
 * `git clone https://github.com/nasa/fprime`
 * The path of your copy of your repo will henceforth be referred to as `<path/to/fprime/checkout>`
