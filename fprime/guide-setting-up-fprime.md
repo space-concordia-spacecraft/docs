@@ -56,7 +56,7 @@ Now see if you have the rest of the dependencies
   * if that command displays something like `/usr/bin/gcc`, then (optional) do `apt upgrade gcc`
     * else do `apt install gcc`
 * `which g++`
-  * if that command displays something like `/usr/bin/g++`, then (optional) do `apt upgrade gcc`
+  * if that command displays something like `/usr/bin/g++`, then (optional) do `apt upgrade g++`
     * else do `apt install g++`
 * `which cmake`
   * if that command displays something like `usr/bin/cmake`, then (optional) do `apt upgrade cmake`
