@@ -52,6 +52,7 @@ Now see if you have the rest of the dependencies
 * Also install:
   * `pip3 install numpy`
   * `pip3 install pytest`
+  * `pip3 install wheel`
   * `pip3 install -r fprime/mk/python/pip_required_build3.py` (run this on the parent folder of the fprime repo)
 
 ### Installing the Arm toolchain compilers
