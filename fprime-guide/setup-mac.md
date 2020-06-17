@@ -1,6 +1,6 @@
-# F ' Install for MacOS
+# Fprime Install for MacOS
 
-This guide aims to enable users to install F ' directly on their Mac without the use of VirtualBox
+This guide aims to enable users to install Fprime directly on their Mac without the use of VirtualBox
 
 ## Before getting started
 
@@ -38,7 +38,7 @@ By default, the file should be copied under /Users/yourcurrentuser/fprime. For t
 * `python3 -m venv ./fprime-venv`
 * To activate the virtual environment, execute  `. ./fprime-venv/bin/activate` Your terminal should now show `(fprime-venv)`
 
-### Installing F ' Python Packages
+### Installing Fprime Python Packages
 
 **Reminder:** `/your/path/to/fprime` refers to the path of your clone of the fprime repo, replace it with your actual pathname
 
@@ -46,7 +46,7 @@ By default, the file should be copied under /Users/yourcurrentuser/fprime. For t
 * `pip install ./Fw/Python`
 * `pip install ./Gds`
 
-### Checking Your F ' Installation
+### Checking Your Fprime Installation
 
 * `cd Ref`
 * `fprime-util generate`

@@ -1,35 +1,35 @@
 # Fprime Guide
 
-The following guide will cover the installation, deployment and capabalities
+_Note: This guide is a conglomerate of different guides provided in the [Fprime](https://github.com/nasa/fprime) repo. At the bottom of this page, there is a list of resources the user might find useful when working with Fprime._
 
-## TLDR
+The following guide will cover the installation, deployment and capabalities of Fprime. Fprime is a component-driven framework tailored to small-scale spaceflight systems such as CubeSats. This framework was created by NASA and allows for rapid development and deployment of spaceflight and other embedded software applications.
 
-```bash
-# Clone the Repo
-git clone <repolink.git>
+## Quick Installation Guide
 
-# Get Status (whether files were modified or remote was updated)
-git status
-# Pull changes to local
-git pull # alternatively: git pull origin <branchName> (no '-u')
-# Stage your changes
-git add <filename> # alternatively: git add . to add all files
-# Commit your changes
-git commit -m "[#XX] Add Git guide's TLDR"
-# Push your changes
-git push # alternatively: git push -u origin <branchName> (note the '-u')
+_Note: If you wish to see a more in depth guide [click here](/fprime-guide/fprime-setup-linux)_
 
-# Create a branch and switch to it
-git checkout -b <branchName> # alternatively: just create the branch with git branch <branchName>
-# Update the list of branches from the remote
-git fetch -a
-# Update your branch with the changes from master
-git merge master
-# Change branch
-git checkout <branchName>
-# Go back to master
-git checkout master
+In order for this quick guide to work you must have a Linux or Max OS X operating system (or Windows Subsystem for Linux on Windows), [CMake](https://cmake.org/download/) available on the system path, Bash or Bash compatible shell, CLand or GCC compiler and [Python 3](https://www.python.org/downloads/) with PIP. It is also recommended for users to install Fprime python dependencies. The following commands are the most basics steps to setting up and running an example application on Fprime.
 
-# See the list of commits
-git log
+**Clone and Install**
 ```
+git clone https://github.com/nasa/fprime.git
+cd fprime
+pip install Fw/Python Gds/
+```
+**Build the Ref Application**
+```
+cd Ref
+fprime-util generate
+fprime-util install
+```
+**Run the Ref Application**
+```
+./bin/*/Ref
+...
+CTRL-C
+```
+
+## Resources
+
+- [PowerPoint About Fprime Framework](https://github.com/nasa/fprime/blob/master/docs/Architecture/FPrimeSoftwareArchitecture.pdf)
+- [Original User's Guide](https://github.com/nasa/fprime/blob/master/docs/UsersGuide/FprimeUserGuide.pdf)
