@@ -1,6 +1,6 @@
 # Setting Up Fprime
 
-_Note: If you are a [Windows](/fprime-guide/fprime-setup-windows) user, or a [Mac OS](/fprime-guide/fprime-setup-mac) user, you should click on the respective operating system and follow that guide instead._
+_Note: If you are a [Windows](/fprime-guide/setup-windows) user, or a [Mac OS](/fprime-guide/setup-mac) user, you should click on the respective operating system and follow that guide instead._
 
 The following guide explains how to set up Fprime for a linux operating system. It will cover how to install the system dependencies and how to check the installation.
 

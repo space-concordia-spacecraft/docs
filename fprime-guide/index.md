@@ -6,7 +6,7 @@ The following guide will cover the installation, deployment and capabalities of 
 
 ## Quick Installation Guide
 
-_Note: If you wish to see a more in depth guide [click here](/fprime-guide/fprime-setup-linux)_
+_Note: If you wish to see a more in depth guide [click here](/fprime-guide/setup-linux)_
 
 In order for this quick guide to work you must have a Linux or Max OS X operating system (or Windows Subsystem for Linux on Windows), [CMake](https://cmake.org/download/) available on the system path, Bash or Bash compatible shell, CLand or GCC compiler and [Python 3](https://www.python.org/downloads/) with PIP. It is also recommended for users to install Fprime python dependencies. The following commands are the most basics steps to setting up and running an example application on Fprime.
 

@@ -1,5 +1,17 @@
 <!-- markdownlint-disable MD041-->
-* [Back to Home](README.md)
-* [Git Guide](/git-guide/index)
-* [Fprime Guide](/fprime-guide/index)
-* [CDH modules chart](/charts/cdh-modules-chart)
+- [Introduction](README.md)
+- **Git Guides**
+	- [Introduction](/git-guide/index)
+	- [Git Basics](/git-guide/basic-guide)
+	- [Git Commands](/git-guide/git-commands)
+	- [Advanced Guide](/git-guide/advanced-guide)
+	- [Good Practices](/git-guide/good-practices)
+- **Fprime Guides**
+	- [Introduction](/fprime-guide/index)
+	- [Linux Setup](/fprime-guide/setup-linux)
+	- [Mac Setup](/fprime-guide/setup-mac)
+	- [Windows Setup](/fprime-guide/setup-windows)
+	- [Architecture](/fprime-guide/architecture)
+	- [Build Examples](/fprime-guide/build-example)
+- **Charts**
+	- [CDH modules chart](/charts/cdh-modules-chart)
