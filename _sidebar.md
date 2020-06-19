@@ -12,6 +12,7 @@
 	- [Mac Setup](/fprime-guide/setup-mac)
 	- [Windows Setup](/fprime-guide/setup-windows)
 	- [Architecture](/fprime-guide/architecture)
+	- ['fprime-util' Commands](/fprime-guide/commands.md)
 	- [Build Examples](/fprime-guide/build-example)
 - **Charts**
 	- [CDH modules chart](/charts/cdh-modules-chart)
