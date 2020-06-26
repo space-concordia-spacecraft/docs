@@ -1,5 +1,10 @@
 <!-- markdownlint-disable MD041-->
-- [Introduction](README.md)
+- [**SC-ODIN**](README.md)
+- **Contribution Guides**
+	- [Introduction](/contribution-guide/index)
+	- [Markdown TLDR](/contribution-guide/markdown-tldr)
+	- [Project Structure](/contribution-guide/project-structure)
+	- [Plant UML](/contribution-guide/plant-uml)
 - **Git Guides**
 	- [Introduction](/git-guide/index)
 	- [Git Basics](/git-guide/basic-guide)
