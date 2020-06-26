@@ -2,7 +2,9 @@
 
 _Note: This guide is based off of another guide. [Click here](https://docs.laurentlao.com/#/guides/guide-git) to check the original version._
 
-The following guide will cover different git capabilities in detail. A list of useful commands can be found in the following section.
+The following set of guides will cover different git capabilities in detail. This allows the user to familiarize themselves with the tool. 
+
+A list of useful commands can be found in the following section.
 
 ## TLDR
 

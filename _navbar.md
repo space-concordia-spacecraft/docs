@@ -1,0 +1,2 @@
+- [Guides](README.md)
+- [Resources](/resources/index)

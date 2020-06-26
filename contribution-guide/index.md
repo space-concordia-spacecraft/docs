@@ -1,4 +1,4 @@
-# How to contribute
+# How to Contribute
 
 The following guide will teach the user how to contribute to the documentation for the SC-ODIN project.
 

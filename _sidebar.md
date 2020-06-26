@@ -1,18 +1,18 @@
 <!-- markdownlint-disable MD041-->
 - [**SC-ODIN**](README.md)
 - **Contribution Guides**
-	- [Introduction](/contribution-guide/index)
+	- [How to Contribute](/contribution-guide/index)
 	- [Markdown TLDR](/contribution-guide/markdown-tldr)
 	- [Project Structure](/contribution-guide/project-structure)
 	- [Plant UML](/contribution-guide/plant-uml)
 - **Git Guides**
-	- [Introduction](/git-guide/index)
+	- [Git Introduction](/git-guide/index)
 	- [Git Basics](/git-guide/basic-guide)
 	- [Git Commands](/git-guide/git-commands)
 	- [Advanced Guide](/git-guide/advanced-guide)
 	- [Good Practices](/git-guide/good-practices)
 - **Fprime Guides**
-	- [Introduction](/fprime-guide/index)
+	- [Fprime Introduction](/fprime-guide/index)
 	- [Linux Setup](/fprime-guide/setup-linux)
 	- [Mac Setup](/fprime-guide/setup-mac)
 	- [Windows Setup](/fprime-guide/setup-windows)
