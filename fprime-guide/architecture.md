@@ -112,11 +112,15 @@ _Note: The following code is incomplete and is only supposed to serve as a basic
 </component>
 ```
 
-## Ports TODO: Add interface examples for each type of port
+## Ports
 
 Ports are directional typed interfaces in the architecture. The direction is only related to the invocation, not necessarily how the data flows as ports can also retrieve data. They can connect to other typed ports, components and serialized ports. Additionally, multiple output ports can be connected to a single input port.
 
-In order to create a port, use the interface tag
+In order to create a new port, the user must first create an xml file with the following naming convention.
+
+`PortNameAi.xml`
+
+Then, they must define the port by using the `<interface>` tag, and then write all of the code that pertains to that port within the scope of the tag. For example:
 
 _Note: The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
 
@@ -143,9 +147,15 @@ _Note: The following code is incomplete and is only supposed to serve as a basic
 </interface>
 ```
 
-If you wish to use the new port in a component, you must use the `<port>`
+If you wish to use the new port inside a component, you must first import it by using the `<import_port_type>`.
 
-_Note: the tag should be a child of the `<ports>` tag._
+```xml
+<import_port_type>Ref/MathPorts/MathOpPortAi.xml</import_port_type>
+```
+
+The path in the port import statement is relative to the root of the repository. Once the port has been imported declare it by using the `<port>` tag with it's attributes.
+
+_Note: The tag should be a child of the `<ports>` tag._
 
 ```xml
 <port name="PortName" data_type="Namespace::name" kind="kind">
@@ -165,72 +175,213 @@ The following table contains information about the attributes for the `<port>` t
 
 Port calls directly invoke derived functions without passing through queue.
 
-Here's an example
+Here's an example of code taken from within the fprime project for a synchronous port:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../xml/ISF_Type_Schema.rnc" type="compact"?>
+<interface name="Sched" namespace="Svc">
+    <comment>
+    Scheduler Port with order argument
+    </comment>
+    <args>
+        <arg name="context" type="NATIVE_UINT_TYPE">
+            <comment>The call order</comment>
+        </arg>
+    </args>
+</interface>
+```
+
+In order to use the port within a given component, the user must first import it and then declare it.
 
 _Note: The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
 
 ```xml
+...
+<import_port_type>Svc/Sched/SchedPortAi.xml</import_port_type>
+...
 <port name="SchedIn" data_type="Sched" kind="sync_input">
     <comment>
     The rate group scheduler input
     </comment>
 </port>
+...
 ```
 
 #### Guarded Port
 
 Port calls directly invoke derived functions, but only after locking a mutex shared by all guarded ports in component.
 
-Here's an example
+Here's an example of code taken from within the fprime project for a guarded port:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../xml/ISF_Type_Schema.rnc" type="compact"?>
+
+<interface name="BufferSend" namespace="Fw">
+    <import_serializable_type>Fw/Buffer/BufferSerializableAi.xml</import_serializable_type>
+    <args>
+        <arg name="fwBuffer" type="Fw::Buffer" pass_by="reference">
+        </arg>
+    </args>
+</interface>
+```
 
 _Note: The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/Svc/BufferManager/BufferManagerComponentAi.xml)._
 
 ```xml
+...
+<import_port_type>Fw/Buffer/BufferSendPortAi.xml</import_port_type>
+...
 <port name="bufferSendIn" data_type="Fw::BufferSend"  kind="guarded_input"    max_number="1">
-        </port>
+</port>
+...
 ```
 
 #### Asynchronous Port
 
 Port calls are placed in a queue and dispatched on thread emptying the queue.
 
-Here's an example
+Here's an example of code taken from within the fprime project for a asynchronous port:
+
+```xml
+<interface name="MathResult" namespace="Ref">
+    <comment>
+    Port to return the result of a math operation
+    </comment>
+    <args>
+        <arg name="result" type="F32">
+            <comment>the result of the operation</comment>
+        </arg>
+    </args>
+</interface>
+```
 
 _Note: The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
 
 ```xml
+...
+<import_port_type>Ref/MathPorts/MathResultPortAi.xml</import_port_type>
+...
 <port name="mathIn" data_type="Ref::MathResult" kind="async_input">
     <comment>
     Port for returning the math result
     </comment>
 </port>
+...
 ```
 
 ### Output Port
 
 Output ports are invoked by calling generated base class functions from the implementation class.
 
-Here's an example
+Here's an example of code taken from within the fprime project for an output port:
+
+```xml
+<interface name="MathOp" namespace="Ref">
+    <comment>
+    Port to perform an operation on two numbers
+    </comment>
+    <args>
+        <arg name="val1" type="F32">
+        </arg>
+        <arg name="val2" type="F32">
+        </arg>
+        <arg name="operation" type="ENUM">
+            <enum name="MathOperation">
+                <item name="MATH_ADD"/>
+                <item name="MATH_SUB"/>
+                <item name="MATH_MULTIPLY"/>
+                <item name="MATH_DIVIDE"/>
+            </enum>
+            <comment>operation argument</comment>
+        </arg>
+    </args>
+</interface>
+```
 
 _Note: The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
 
 ```xml
+...
+<import_port_type>Ref/MathPorts/MathOpPortAi.xml</import_port_type>
+...
 <port name="mathOut" data_type="Ref::MathOp" kind="output">
     <comment>
     Port for sending the math operation
     </comment>
 </port>
+...
 ```
 
-## Serialization TODO: rewrite this
+## Serialization
 
-Serialization is a key concept in the framework. Definition: Taking a specific set of typed values or function arguments and converting them in an architecture-independent way into a data buffer. Port calls and commands and their arguments are serialized and placed on message queue in components. Command arguments and telemetry values are passed and encoded/decoded into this form. Components that store and pass data can use this orm and not require knowledge of underlying types. User can define arbitrary interface argument types and framework automatically serializes. User can define complex types in XML and code generator will generate classes that are serializable for use internally and to and from ground software.
+Serialization is the process of converting typed values or function arguments into a data buffer. Port calls, commands and their arguments are examples of items that are serialized and placed into queues in components. The Fprime framework will automatically serialize arbitrary interface argument types that the user defineds. Additionally, the user can define complex types in XML and the code generator that comes within Fprime will generate classes that are serializable for use internally and to and from ground software.
+
+In order to create a serializable structure, the user must create an xml file with the following naming convention.
+
+`NameSerializableAi.xml`
+
+And then use the `<serializable>` tag to encapsulate the code.
+
+```xml
+<serializable namespace="Ref" name="MathOp">
+    <comment>
+    This value holds the values of a math operation
+    </comment>
+    <members>
+        <member name="val1" type="F32"/>
+        <member name="val2" type="F32"/>
+        <member name="op" type="ENUM">
+            <enum name="Operation">
+                <item name="ADD"/>
+                <item name="SUB"/>
+                <item name="MULT"/>           
+                <item name="DIVIDE"/>           
+            </enum>
+        </member>
+        <member name="result" type="F32"/>
+    </members>
+</serializable>
+```
 
 #### Serialization Ports
 
-A special optional port that handles serialized buffers. Takes as input a serialized buffer when it is an input port, and outputs a serialized buffer when it is an output port. Can be connected to any typed port (almost). For input port, calling port detects connection and serializes arguments. For output port, serialized port calls interface on typed port that deserializes arguments. Not supported for ports with return types. Useful for generic storage and communication components that don't need to know type. Allows design and implementation of C&DH (command and data handling) components that can be reused.
+Serialization Ports are special ports that handle serialized buffers. These ports are useful when working with generic storage and communication components that don't need to know type, allowing the design and implementation of reusable C&DH components. While input ports take in a serialized buffer, output ports return a serialized buffer. This feature is not available for ports with return types.
 
-## Commands TODO: rewrite this
+## Commands
+
+A command is an instruction given to the system so that it can perform a specific action. In order to declare a command the user must use the `<command>` tag.
+
+_Note: The tag should be a child of the `<commands>` tag. The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
+```xml
+...
+<command kind="async" opcode="0" mnemonic="MS_DO_MATH">
+    <comment>
+    Do a math operation
+    </comment>
+    <args>
+        <arg name="val1" type="F32">
+            <comment>The first value</comment>
+        </arg>          
+        <arg name="val2" type="F32">
+            <comment>The second value</comment>
+        </arg>          
+        <arg name="operation" type="ENUM">
+            <enum name="MathOp">
+                <item name="ADD"/>
+                <item name="SUBTRACT"/>
+                <item name="MULTIPLY"/>           
+                <item name="DIVIDE"/>           
+            </enum>
+            <comment>The operation to perform</comment>
+        </arg>
+     </args>
+</command>
+...
+```
+
+The following table contains the attributes used for the `<command>` tag and a description of each attribute.
 
 |Attribute|Description|
 |---|---|
@@ -238,7 +389,22 @@ A special optional port that handles serialized buffers. Takes as input a serial
 |opcode|A numeric value for the command. The value is relative to a base value set when the component is added to a topology|
 |kind|The kind of command. Can be `sync_input`,`async_input`,`guarded_input`, or `output`|
 
-## Telemetry TODO: rewrite this
+## Channel (Telemetry item)
+
+Channels are defined per-component single values read and downlinked. They are also called telemetry items. In order to declare a channel the user must use the `<channel>` tag.
+
+_Note: The tag should be a child of the `<telemetry>` tag. The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
+```xml
+...
+<channel id="0" name="MS_VAL1" data_type="F32">
+    <comment>
+    The first value
+    </comment>
+</channel>
+...
+```
+
+The following table contains the attributes used for the `<channel>` tag and a description of each attribute.
 
 |Attribute|Description|
 |---|---|
@@ -246,7 +412,39 @@ A special optional port that handles serialized buffers. Takes as input a serial
 |id|A numeric value for the channel. The value is relative to a base value set when the component is added to a topology|
 |data_type|The data type of the channel. Can be a built-in type, an enumeration or an externally defined serializable type|
 
-## Events TODO: rewrite this
+## Events
+
+An event is a type of downlinked data representing a single event within the system. In order to declare an event the user must use the `<event>` tag.
+
+_Note: The tag should be a child of the `<events>` tag. The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
+```xml
+...
+<event id="0" name="MS_COMMAND_RECV" severity="ACTIVITY_LO" format_string="Math Cmd Recvd: %f %f %d"  >
+    <comment>
+    Math command received
+    </comment>
+    <args>
+        <arg name="val1" type="F32">
+            <comment>The val1 argument</comment>
+        </arg>          
+        <arg name="val2" type="F32">
+            <comment>The val2 argument</comment>
+        </arg>          
+        <arg name="op" type="ENUM">
+            <comment>The requested operation</comment>
+        <enum name="MathOpEv">
+            <item name="ADD_EV"/>
+            <item name="SUB_EV"/>
+            <item name="MULT_EV"/>           
+            <item name="DIV_EV"/>           
+        </enum>
+        </arg>          
+    </args>
+</event>
+...
+```
+
+The following table contains the attributes used for the `<event>` tag and a description of each attribute.
 
 |Attribute|Description|
 |---|---|
@@ -255,9 +453,22 @@ A special optional port that handles serialized buffers. Takes as input a serial
 |id|A numeric value for the event. The value is relative to a base value set when the component is added to a topology|
 |format_string|A C-style format string for displaying the event and the argument values.|
 
-## Parameters TODO: rewrite this
+## Parameters
 
-Parameters are traditional means of storing non-volatile state. Framework provides code generation to manage, but user must write specific storage component. During initialization, a public method in the class is called that retrieves the parameters and stores copies locally. Can be called again if parameter is updated.
+Parameters are used to store non-volatile states. While the framework provides code generation to manage parameters, the user must write specific storage components. When initializing, a public method in the class retrieves the parameters and stores local copies. If parameters are updated, the method can be called again. In order to declare a parameter the user must use the `<parameter>` tag.
+
+_Note: The tag should be a child of the `<parameters>` tag. The following code is incomplete and is only supposed to serve as a basic template example. If you wish to see the full code [click here](https://github.com/nasa/fprime/blob/master/docs/Tutorials/MathComponent/Tutorial.md)._
+```xml
+...
+<parameter id="0" name="factor2" data_type="F32" default="1.0" set_opcode="10" save_opcode="11">
+    <comment>
+    A test parameter
+    </comment>
+</parameter>
+...
+```
+
+The following table contains the attributes used for the `<parameter>` tag and a description of each attribute.
 
 |Attribute|Description|
 |---|---|

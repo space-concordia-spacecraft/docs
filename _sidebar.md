@@ -1,17 +1,23 @@
 <!-- markdownlint-disable MD041-->
-- [Introduction](README.md)
+- [**SC-ODIN**](README.md)
+- **Contribution Guides**
+	- [How to Contribute](/contribution-guide/index)
+	- [Markdown TLDR](/contribution-guide/markdown-tldr)
+	- [Project Structure](/contribution-guide/project-structure)
+	- [Plant UML](/contribution-guide/plant-uml)
 - **Git Guides**
-	- [Introduction](/git-guide/index)
+	- [Git Introduction](/git-guide/index)
 	- [Git Basics](/git-guide/basic-guide)
 	- [Git Commands](/git-guide/git-commands)
 	- [Advanced Guide](/git-guide/advanced-guide)
 	- [Good Practices](/git-guide/good-practices)
 - **Fprime Guides**
-	- [Introduction](/fprime-guide/index)
+	- [Fprime Introduction](/fprime-guide/index)
 	- [Linux Setup](/fprime-guide/setup-linux)
 	- [Mac Setup](/fprime-guide/setup-mac)
 	- [Windows Setup](/fprime-guide/setup-windows)
 	- [Architecture](/fprime-guide/architecture)
+	- ['fprime-util' Commands](/fprime-guide/commands.md)
 	- [Build Examples](/fprime-guide/build-example)
 - **Charts**
 	- [CDH modules chart](/charts/cdh-modules-chart)

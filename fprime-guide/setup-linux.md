@@ -28,7 +28,7 @@ The following guide explains how to set up Fprime for a linux operating system. 
   * Then you'll be able to switch to the fprime-venv using `. ./venv.sh`
 * When you're switched, your terminal should show `(fprime-venv)`
 
-_Note: Any time the user wishes to use Fprime, this virtual environment should be activated. This should be done in each new shell the user uses._
+_Note: Any time the user wishes to work with Fprime, this virtual environment should be activated. This should be done in each new shell the user uses._
 
 ### Installing other dependencies
 

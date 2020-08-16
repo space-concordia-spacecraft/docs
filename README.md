@@ -11,11 +11,9 @@ Any contributions pushed to the `master` branch of the [repository](https://gith
 
 See the sidebar to nagivate the website.
 
-_NOTE:_ The `search bar` only works on files that currently are shown in the Sidebar. If you want to search a specific subject, navigate to it before using the `search bar`.
-
 ## Contributing
 
-[Guide](guide-contribution.md) on how to contribute.
+[Guide](/contribution-guide/index) on how to contribute.
 
 [Issues](https://github.com/spaceconcordia/sc-odin-docs/issues) you can contribute on.
 

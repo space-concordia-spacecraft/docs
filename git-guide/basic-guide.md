@@ -1,6 +1,6 @@
 # Git Basics
 
-The following guide will go over the bas
+The following guide will go over the basics of Git.
 
 ## Git GUI Client
 
