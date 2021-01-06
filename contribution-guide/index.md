@@ -12,7 +12,7 @@ In order to work on the project, the user must first clone the repo.
 
 Install Node.js (easiest way is through the [package](https://nodejs.org/en/)), then install docsify
 
-`npm install -g docsify`
+`npm i docsify-cli -g`
 
 ## Contributing
 

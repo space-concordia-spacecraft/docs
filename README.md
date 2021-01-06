@@ -15,6 +15,7 @@ In order to use it's very simple. First clone the repo
 
 ```bash
 git clone https://github.com/sc-odin/docs/
+npm i docsify-cli -g
 ```
 
 And then type the following command
