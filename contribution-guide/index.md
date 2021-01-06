@@ -32,6 +32,7 @@ Create your own branch that will contain your modifications. For `<nameOfBranch>
 
 ```bash
 git checkout -b <nameOfBranch>
+git push --set-upstream origin <nameOfBranch>
 ```
 
 We strongly suggest that while you are making modifications, you have the project running so that you can see the results as you go
@@ -40,10 +41,20 @@ We strongly suggest that while you are making modifications, you have the projec
 docsify serve ./docs
 ```
 
-Once the changes have been made, push them to your branch. Check our [Git Guide](/git-guide/good-practices) on good practices to ensure that your commit message follows the standard.
+Once the changes have been made, push them to your branch. Check our [Git Guide](/git-guide/good-practices) on good practices to ensure that your commit message follows the standard
+
+```bash
+git add -A
+git commit -m "Commit Name"
+git push
+```
+
+Finally, once you have completed the feature or fix, it is time to merge back to dev and get rid of the current branch
 
 ```bash
 git checkout dev
 git merge --no-ff <nameOfBranch>
 git branch -d <nameOfBranch>
 ```
+
+If you wish to know more about proper branch management, we strongly recommend you take a look at this [guide](https://nvie.com/posts/a-successful-git-branching-model/).
