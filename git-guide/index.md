@@ -34,6 +34,7 @@ git checkout <branchName>
 # Go back to master
 git checkout master
 
+
 # See the list of commits
 git log
 ```
