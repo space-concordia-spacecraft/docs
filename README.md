@@ -3,20 +3,24 @@
 
 This website has been created with the help of [Docsify](https://docsify.js.org/#/).
 
-It aims to serve documentation for the development of the SC-ODIN satellite by the [Space Concordia Spacecraft team](https://spaceconcordia.github.io/spacecraft.html).
+It aims to serve documentation for the development of the SC-ODIN satellite by the [Space Concordia Spacecraft team](http://www.spaceconcordia.ca/en/). Throughout the document, you can find [Fprime guides](/fprime-guide/index), [Github guides](/git-guide/index) and other guides that may be useful when trying to understand how the cubesat works.
 
-Any contributions pushed to the `master` branch of the [repository](https://github.com/spaceconcordia/sc-odin-docs) will update this website after a couple of minutes.
+All main subjects are shown on the sidebar and if you wish to look for a specific section you can use the search bar.
 
-## Site Navigation
+Additionally, if you wish to contribute, take a look at the following [guide](/contribution-guide/index). Additionally, if you want to report an issue or a possible enhancement, first see in [issues](https://github.com/spaceconcordia/sc-odin-docs/issues) if anything similar has been mentioned, if that's not the case, you can create a new [issue](https://github.com/spaceconcordia/sc-odin-docs/issues/new). **Please make sure you follow the templates that we offer**.
 
-See the sidebar to nagivate the website.
+## How To Use
 
-## Contributing
+In order to use it's very simple. First clone the repo
 
-[Guide](/contribution-guide/index) on how to contribute.
+```bash
+git clone https://github.com/sc-odin/docs/
+```
 
-[Issues](https://github.com/spaceconcordia/sc-odin-docs/issues) you can contribute on.
+And then type the following command
 
-## Request a modification
+```bash
+docsify serve ./docs
+```
 
-Create a new [Issue](https://github.com/spaceconcordia/sc-odin-docs/issues/new) page to request an addition or some modifcations
+Note that I just used `./docs` to symbolize the path to the repo. 

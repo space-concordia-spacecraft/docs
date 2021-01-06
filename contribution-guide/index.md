@@ -1,6 +1,6 @@
 # How to Contribute
 
-The following guide will teach the user how to contribute to the documentation for the SC-ODIN project.
+The following guide will teach the user how to contribute to the documentation project for the SC-ODIN.
 
 ## Set up
 
@@ -16,37 +16,34 @@ Install Node.js (easiest way is through the [package](https://nodejs.org/en/)), 
 
 ## Contributing
 
-Before contributing, make sure that you are familiar with using Markdown. You can check our [Markdown TLDR](/contribution-guide/markdown-tldr) if you want to have a quick look at how to use this tool.
+Before contributing, make sure that you are familiar with using Markdown. You can check our [Markdown TLDR](/contribution-guide/markdown-tldr) if you want to have a quick look at how to use this language.
 
-Additionally, make sure you are familiar with the [project structure](/contribution-guide/project-structure). In the guide, you will find in depth steps on how to contribute to the documentation while keeping the structure of the project. By following a given structure, the maintenance and upgrades of this website can be done with ease.
+Additionally, make sure you are familiar with the [project structure](/contribution-guide/project-structure).
 
 If you want to include UML diagrams into your modifications, it is also recommended you check our [Plant UML Guide](/contribution-guide/plant-uml)
 
-In order to contribute, make sure your master is up to date
+In order to contribute, make sure your project is up to date
 
 ```bash
-git checkout master
-git pull origin master
+git pull
 ```
 
-Create your own branch that will contain your modifications. For `<nameOfBranch>`, you might want to name it `issueNumberYouWantToFix-context` i.e. `47-fix-git-formatting`.
+Create your own branch that will contain your modifications. For `<nameOfBranch>`, you might want to name it `fix/issue-you-want-to-fix` i.e. `fix/missing-links` or `feature/new-feature` i.e. `feature/new-resources`.
 
 ```bash
 git checkout -b <nameOfBranch>
 ```
 
-In order to preview the changes made to the site, the user must run:
+We strongly suggest that while you are making modifications, you have the project running so that you can see the results as you go
 
 ```bash
-docsify serve <project>
+docsify serve ./docs
 ```
 
 Once the changes have been made, push them to your branch. Check our [Git Guide](/git-guide/good-practices) on good practices to ensure that your commit message follows the standard.
 
 ```bash
-git add <files modified>
-git commit -m "[#issueNumber] Verb + context"
-git push -u origin <nameOfBranch>
+git checkout dev
+git merge --no-ff <nameOfBranch>
+git branch -d <nameOfBranch>
 ```
-
-Make a [pull request](https://github.com/spaceconcordia/sc-odin-docs/pulls) and assign a collaborator.
