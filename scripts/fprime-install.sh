@@ -5,10 +5,7 @@ echo
 echo Installing dependencies ...
 echo
 sudo apt update
-sudo apt-get -y install cmake
-sudo apt install python3 python3-pip python3-venv
-sudo apt install build-essential
-sudo apt install git-all
+sudo apt -y install build-essential cmake python3 python3-pip python3-venv git-all
 
 # Create repository folder
 echo

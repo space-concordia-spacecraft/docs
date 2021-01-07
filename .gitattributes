@@ -1,0 +1,4 @@
+# Shell Script EOL characters
+# LF ("\n") only, not CRLF ("\r\n")
+# Since Linux does not expect Carriage Return characters
+*.sh text eol=lf
