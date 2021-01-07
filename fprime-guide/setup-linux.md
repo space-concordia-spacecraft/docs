@@ -2,6 +2,8 @@
 
 _Note: If you are a [Windows](/fprime-guide/setup-windows) user, or a [Mac OS](/fprime-guide/setup-mac) user, you should click on the respective operating system and follow that guide instead._
 
+**TL;DR** - This [shell script](/scripts/fprime-install) can be run to automate the following steps. It installs all the necessary dependencies, builds the fprime Ref application, and deploys the ground station HTML GUI.
+
 The following guide explains how to set up Fprime for a linux operating system. It will cover how to install the system dependencies and how to check the installation.
 
 ## Installing System Dependencies
@@ -79,4 +81,4 @@ Now you should be done with installing dependencies. Check your installation wit
 * `fprime-util build --jobs 32` should return no error (it looks really cool)
 * `fprime-util install --jobs 32` should return no error (it looks really cool)
 * Go back to the parent folder of the `fprime repo`
-* Run `fprime-gds -g html -d <path/to/fprime/checkout>/Ref` (this won't work if you have not done all 3 of the generate, build and install before)
+* Run `fprime-gds -g html -r <path/to/fprime/checkout>/Ref/build-artifacts` (this won't work if you have not done all 3 of the generate, build and install before)
