@@ -33,7 +33,7 @@ fprime_dir=$PWD
 echo
 echo Cloning fprime repository ...
 echo
-git clone https://github.com/nasa/fprime "$fprime_dir"
+git clone https://github.com/sc-odin/fprime "$fprime_dir"
 cd "$fprime_dir/.." || exit
 
 # Create and launch python virtual environment
